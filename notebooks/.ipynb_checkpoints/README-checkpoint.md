@@ -1,165 +1,73 @@
-{
- "cells": [
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## Creating MAIZSIM Weather File Input"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "### The NSRD Hourly Solar Radiation Dataset"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "#### Year 1961-1990 Dataset (WBAN ID#): \n",
-    "\n",
-    "##### Headers\n",
-    "- 002-006: WBAN number\n",
-    "- 008-029: City\n",
-    "- 031-032: State\n",
-    "- 034-036: Time Zone\n",
-    "- 039-044: Latitude\n",
-    "    - 039: N = North of equator\n",
-    "    - 040-042: Degree\n",
-    "    - 043-044: Minutes\n",
-    "- 047-053: Longitude\n",
-    "    - 047: W = West, E = East\n",
-    "    - 048-050: Degree\n",
-    "    - 052-053: Minutes\n",
-    "- 056-059: Elevation\n",
-    "\n",
-    "##### Data Elements\n",
-    "- 002-012: Local standard time\n",
-    "- 024-030: Global horizontal radiation (GHR, Wh/m2)"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "#### Year 1991-2010 Dataset (USAF ID#):\n",
-    "\n",
-    "##### Data Elements\n",
-    "- col01: YYYY-MM-DD\n",
-    "- col02: HH:MM\n",
-    "- col16: METSTAT Glo (Wh/m2)\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "### The NASA Integrated Surfact Hourly (ISH) Dataset"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "#### Site Info\n",
-    "- pos 1-4: The number of characters in the variable data section.\n",
-    "- pos 5-10: USAF identifier (1991-2010)\n",
-    "- pos 11-15: WBAN identifier (1961-1990)\n",
-    "- pos 16-23: Observation date\n",
-    "- pos 24-27: Observation time\n",
-    "- pos 28-28: Flag\n",
-    "- pos 29-34: Latitude\n",
-    "- pos 35-41: Longitude\n",
-    "- pos 47-51: Elevation\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "#### Mandatory Data Section\n",
-    "- pos 66-69: Wind speed (m/s)\n",
-    "- pos 70-70: Wind speed quality code\n",
-    "- pos 88-92: Air temperature (˚C)\n",
-    "- pos 93-93: Air temperature quality code\n",
-    "- pos 94-98: Dew point temperature (˚C)\n",
-    "- pos 99-99: Dew point temperature quality"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "#### Additional Data Section\n",
-    "- "
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "### Workflow to Create Weather File"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "1. Download ISH_NSRD dataset\n",
-    "    - wget\n",
-    "    - figure out site/years that have solar \n",
-    "    radiation data\n",
-    "2. Download ISH dataset\n",
-    "    - wget\n",
-    "    - only download site/years in which we \n",
-    "    know solar radiation data exits\n",
-    "3. \n",
-    "4. \n",
-    "5. \n",
-    "6. Create solar radiation file list based on the weather files left after cleaning up\n",
-    "    - solfile_list_1961to1990 is created \n",
-    "    based on weafile_list_1961to1990\n",
-    "    - \n",
-    "7. Create a correct dataframe setup for ISH \n",
-    "and append the actual ISH data to it."
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  }
- ],
- "metadata": {
-  "kernelspec": {
-   "display_name": "Python 3",
-   "language": "python",
-   "name": "python3"
-  },
-  "language_info": {
-   "codemirror_mode": {
-    "name": "ipython",
-    "version": 3
-   },
-   "file_extension": ".py",
-   "mimetype": "text/x-python",
-   "name": "python",
-   "nbconvert_exporter": "python",
-   "pygments_lexer": "ipython3",
-   "version": "3.6.8"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 2
-}
+## Creating MAIZSIM Weather File Input
+### The NSRD Hourly Solar Radiation Dataset
+
+#### Year 1961-1990 Dataset (WBAN ID#): 
+
+##### Headers
+- 002-006: WBAN number
+- 008-029: City
+- 031-032: State
+- 034-036: Time Zone
+- 039-044: Latitude
+    - 039: N = North of equator
+    - 040-042: Degree
+    - 043-044: Minutes
+- 047-053: Longitude
+    - 047: W = West, E = East
+    - 048-050: Degree
+    - 052-053: Minutes
+- 056-059: Elevation
+
+##### Data Elements
+- 002-012: Local standard time
+- 024-030: Global horizontal radiation (GHR, Wh/m2)
+
+#### Year 1991-2010 Dataset (USAF ID#):
+
+##### Data Elements
+- col01: YYYY-MM-DD
+- col02: HH:MM
+- col16: METSTAT Glo (Wh/m2)
+
+### The NASA Integrated Surfact Hourly (ISH) Dataset
+
+#### Site Info
+- pos 1-4: The number of characters in the variable data section.
+- pos 5-10: USAF identifier (1991-2010)
+- pos 11-15: WBAN identifier (1961-1990)
+- pos 16-23: Observation date
+- pos 24-27: Observation time
+- pos 28-28: Flag
+- pos 29-34: Latitude
+- pos 35-41: Longitude
+- pos 47-51: Elevation
+
+#### Mandatory Data Section
+- pos 66-69: Wind speed (m/s)
+- pos 70-70: Wind speed quality code
+- pos 88-92: Air temperature (˚C)
+- pos 93-93: Air temperature quality code
+- pos 94-98: Dew point temperature (˚C)
+- pos 99-99: Dew point temperature quality
+
+#### Additional Data Section
+- 
+
+### Workflow to Create Weather File
+1. Download ISH_NSRD dataset
+    - wget
+    - figure out site/years that have solar 
+    radiation data
+2. Download ISH dataset
+    - wget
+    - only download site/years in which we 
+    know solar radiation data exits
+3. 
+4. 
+5. 
+6. Create solar radiation file list based on the weather files left after cleaning up
+    - solfile_list_1961to1990 is created 
+    based on weafile_list_1961to1990
+    - 
+7. Create a correct dataframe setup for ISH 
+and append the actual ISH data to it.
