@@ -1,3 +1,4 @@
 *.csv
 *.eps
 raw_data_process/*
+weadata/data/control/*.txt
