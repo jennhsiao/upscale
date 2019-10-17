@@ -5,6 +5,13 @@ In the near-term future, population is expected to rise, with a 35% increase by 
 
 #### Project Overview
 
+
+
+
+#### Maizsim model structure
+![maizsim](/home/disk/eos8/ach315/upscale/figs/fig_maizsim.png)
+
+
 #### Directory Structure
 - init_files: initial files for maizsim
 - notebooks: where all jupyter notebooks are stored
