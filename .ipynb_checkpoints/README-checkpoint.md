@@ -9,7 +9,9 @@ In the near-term future, population is expected to rise, with a 35% increase by 
 
 
 #### Maizsim model structure
-![maizsim](/figs/fig_maizsim.png = 250x250)
+![maizsim](/figs/fig_maizsim.png){:class="img-responsive"}
+![maizsim](/figs/fig_maizsim.png){:height="50%" width="50%"}
+![maizsim](/figs/fig_maizsim.png){:height="700px" width="400px"}
 
 
 #### Directory Structure
