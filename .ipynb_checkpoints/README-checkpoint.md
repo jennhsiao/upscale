@@ -7,8 +7,10 @@ In the near-term future, population is expected to rise, with a 35% increase by 
 The overarching goal of this project is to systematically quantify the vulnerability of future food security to changes in climate and identify region-specific mitigation and adaptation strategies. I will use a process-based maize model to address this goal with three main objectives: 1) Identify region-specific optimal plant traits and management practices that lead to maximum yield under current climate conditions. 2) Quantify the independent and spatially varying effects that temperature and VPD have on maize yields in the US, and gain a mechanistic understanding of the physiological processes that lead to their impacts on yield. 3) Identify regions that are vulnerable to yield loss under future climate conditions, and investigate the potential impact of mitigation and adaptation through cultivar selection and changes in management practices.
 
 #### Maizsim model structure
+Maizsim is a process-based crop simualtion model developed and calibrated for maize plants. Them model represents key physiological and physical processes that occur within the life cycle of a maize plant such as gas exchange, canopy radiative transfer, carbon partitioning, water relations, nitrogen dynamics and phenology. The model is linked to a soil layer model (2DSOIL) that represents a dynamic soil, water, and nutrient vertical profile and has been tested and validated for a number of maize growing regions in the US and across the globe.
+
 <p align="left">
-  <img src="https://github.com/jennhsiao/upscale/blob/master/figs/fig_maizsim.png" width ="400">
+  <img src="https://github.com/jennhsiao/upscale/blob/master/figs/fig_maizsim.png" width ="400" title = "schematic of the maizsim model">
 </p>
 
 #### Directory Structure
