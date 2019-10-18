@@ -10,7 +10,7 @@ The overarching goal of this project is to systematically quantify the vulnerabi
 Maizsim is a process-based crop simualtion model developed and calibrated for maize plants. Them model represents key physiological and physical processes that occur within the life cycle of a maize plant such as gas exchange, canopy radiative transfer, carbon partitioning, water relations, nitrogen dynamics and phenology. The model is linked to a soil layer model (2DSOIL) that represents a dynamic soil, water, and nutrient vertical profile and has been tested and validated for a number of maize growing regions in the US and across the globe.
 
 <p align="left">
-  <img src="https://github.com/jennhsiao/upscale/blob/master/figs/fig_maizsim.png" width ="400" title = "schematic of the maizsim model">
+  <img src="https://github.com/jennhsiao/upscale/blob/master/figs/fig_maizsim.png" width ="400">
 </p>
 
 #### Directory Structure
