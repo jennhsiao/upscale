@@ -8,7 +8,7 @@ The overarching goal of this project is to systematically quantify the vulnerabi
 
 #### Maizsim model structure
 <p align="left">
-  <img src="https://github.com/jennhsiao/upscale/blob/master/figs/fig_maizsim.png">
+  <img src="https://github.com/jennhsiao/upscale/blob/master/figs/fig_maizsim.png" width ="200">
 </p>
 
 #### Directory Structure
