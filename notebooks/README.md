@@ -30,6 +30,7 @@ first search for AA1 within data, the values following it indicate data as follo
 
 
 ### 2. The NSRD Hourly Solar Radiation Dataset
+[NSRD dataset](https://rredc.nrel.gov/solar/old_data/nsrdb/)
 
 #### Year 1961-1990 Dataset (WBAN ID#): 
 
