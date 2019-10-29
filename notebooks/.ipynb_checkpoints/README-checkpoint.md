@@ -1,4 +1,34 @@
 ## Creating MAIZSIM Weather File Input
+### __The NASA Integrated Surfact Hourly (ISH) Dataset__
+
+#### Site Info
+- pos 1-4: The number of characters in the variable data section.
+- pos 5-10: USAF identifier (1991-2010)
+- pos 11-15: WBAN identifier (1961-1990)
+- pos 16-23: Observation date
+- pos 24-27: Observation time
+- pos 28-28: Flag
+- pos 29-34: Latitude
+- pos 35-41: Longitude
+- pos 47-51: Elevation
+
+#### Mandatory Data Section
+- pos 66-69: Wind speed (m/s)
+- pos 70-70: Wind speed quality code
+- pos 88-92: Air temperature (˚C)
+- pos 93-93: Air temperature quality code
+- pos 94-98: Dew point temperature (˚C)
+- pos 99-99: Dew point temperature quality
+
+#### Additional Data Section 
+- AA1: precipitation (liquid precipitation occurrence identifier) <br>
+first search for AA1 within data, the values following it indicate data as following:
+- FLD LEN 2: liquid preciptiation period quantity in hours (hours)
+- FLD LEN 4: liquid precipitation depth dimension (mm)
+- FLD LEN 1: liquid precipitation condition code
+- FLD LEN 1: liquid precipitation quality code
+
+
 ### The NSRD Hourly Solar Radiation Dataset
 
 #### Year 1961-1990 Dataset (WBAN ID#): 
@@ -29,34 +59,7 @@
 - col02: HH:MM
 - col16: METSTAT Glo (Wh/m2)
 
-### The NASA Integrated Surfact Hourly (ISH) Dataset
 
-#### Site Info
-- pos 1-4: The number of characters in the variable data section.
-- pos 5-10: USAF identifier (1991-2010)
-- pos 11-15: WBAN identifier (1961-1990)
-- pos 16-23: Observation date
-- pos 24-27: Observation time
-- pos 28-28: Flag
-- pos 29-34: Latitude
-- pos 35-41: Longitude
-- pos 47-51: Elevation
-
-#### Mandatory Data Section
-- pos 66-69: Wind speed (m/s)
-- pos 70-70: Wind speed quality code
-- pos 88-92: Air temperature (˚C)
-- pos 93-93: Air temperature quality code
-- pos 94-98: Dew point temperature (˚C)
-- pos 99-99: Dew point temperature quality
-
-#### Additional Data Section 
-- AA1: precipitation (liquid precipitation occurrence identifier) <br>
-first search for AA1 within data, the values following it indicate data as following:
-- FLD LEN 2: liquid preciptiation period quantity in hours (hours)
-- FLD LEN 4: liquid precipitation depth dimension (mm)
-- FLD LEN 1: liquid precipitation condition code
-- FLD LEN 1: liquid precipitation quality code
 
 ### Workflow to Create Weather File
 1. Download ISH_NSRD dataset
