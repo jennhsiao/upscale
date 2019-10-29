@@ -50,8 +50,13 @@
 - pos 94-98: Dew point temperature (˚C)
 - pos 99-99: Dew point temperature quality
 
-#### Additional Data Section
-- 
+#### Additional Data Section 
+- AA1: precipitation (liquid precipitation occurrence identifier) <br>
+first search for AA1 within data, the values following it indicate data as following:
+- FLD LEN 2: liquid preciptiation period quantity in hours (hours)
+- FLD LEN 4: liquid precipitation depth dimension (mm)
+- FLD LEN 1: liquid precipitation condition code
+- FLD LEN 1: liquid precipitation quality code
 
 ### Workflow to Create Weather File
 1. Download ISH_NSRD dataset
