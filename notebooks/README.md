@@ -1,5 +1,5 @@
 ## Creating MAIZSIM Weather File Input
-### __The NASA Integrated Surfact Hourly (ISH) Dataset__
+### 1. The NASA Integrated Surfact Hourly (ISH) Dataset
 
 #### Site Info
 - pos 1-4: The number of characters in the variable data section.
@@ -29,7 +29,7 @@ first search for AA1 within data, the values following it indicate data as follo
 - FLD LEN 1: liquid precipitation quality code
 
 
-### The NSRD Hourly Solar Radiation Dataset
+### 2. The NSRD Hourly Solar Radiation Dataset
 
 #### Year 1961-1990 Dataset (WBAN ID#): 
 
@@ -59,17 +59,17 @@ first search for AA1 within data, the values following it indicate data as follo
 - col02: HH:MM
 - col16: METSTAT Glo (Wh/m2)
 
-
-
-### Workflow to Create Weather File
+### 3. Workflow to Create Weather File
 1. Download ISH_NSRD dataset
-    - wget
-    - figure out site/years that have solar 
-    radiation data
+    - wget (script: /home/disk/eos8/ach315/upscale/raw_data_process)
+    - figure out site/years that have solar radiation data
+    - store raw data in /home/disk/eos8/ach315/data/ISH_NSRD
+    - data stored in individual folders for each year
 2. Download ISH dataset
     - wget
-    - only download site/years in which we 
-    know solar radiation data exits
+    - only download site/years in which we know solar radiation data exits
+    - store raw data in /home/disk/eos8/ach315/data/ISH/
+    - data stored in individual folders for each year
 3. 
 4. 
 5. 
