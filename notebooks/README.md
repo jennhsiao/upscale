@@ -1,6 +1,6 @@
 ## Creating MAIZSIM Weather File Input
 ### 1. The NASA Integrated Surfact Hourly Dataset (ISD)
-[ISD description](https://www.ncdc.noaa.gov/isd/data-access)
+[ISD description](https://www.ncdc.noaa.gov/isd/data-access) <br/>
 [ISD dataset](ftp://ftp.ncdc.noaa.gov/pub/data/noaa)
 
 #### Site Info
@@ -23,7 +23,7 @@
 - pos 99-99: Dew point temperature quality
 
 #### Additional Data Section 
-- AA1: precipitation (liquid precipitation occurrence identifier) <br>
+- AA1: precipitation (liquid precipitation occurrence identifier)
 first search for AA1 within data, the values following it indicate data as following:
 - FLD LEN 2: liquid preciptiation period quantity in hours (hours)
 - FLD LEN 4: liquid precipitation depth dimension (mm)
