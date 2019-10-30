@@ -1,5 +1,7 @@
 ## Creating MAIZSIM Weather File Input
-### 1. The NASA Integrated Surfact Hourly (ISH) Dataset
+### 1. The NASA Integrated Surfact Hourly Dataset (ISD)
+[ISD description](https://www.ncdc.noaa.gov/isd/data-access)
+[ISD dataset](ftp://ftp.ncdc.noaa.gov/pub/data/noaa)
 
 #### Site Info
 - pos 1-4: The number of characters in the variable data section.
@@ -71,12 +73,8 @@ first search for AA1 within data, the values following it indicate data as follo
     - only download site/years in which we know solar radiation data exits
     - store raw data in /home/disk/eos8/ach315/data/ISH/
     - data stored in individual folders for each year
-3. 
-4. 
-5. 
 6. Create solar radiation file list based on the weather files left after cleaning up
-    - solfile_list_1961to1990 is created 
-    based on weafile_list_1961to1990
-    - 
-7. Create a correct dataframe setup for ISH 
-and append the actual ISH data to it.
+    - solfile_list_1961to1990 is created based on weafile_list_1961to1990
+8. run script 'weafile_read.ipynb' to read in raw weather data
+9. run script 'weafile_process.ipynb' to 
+
