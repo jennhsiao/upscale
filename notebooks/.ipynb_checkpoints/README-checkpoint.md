@@ -1,5 +1,6 @@
 ## Creating MAIZSIM Weather File Input
-### __The NASA Integrated Surfact Hourly (ISH) Dataset__
+### 1. The NASA Integrated Surfact Hourly Dataset (ISD)
+[ISD dataset](https://www.ncdc.noaa.gov/isd/data-access) - choose FTP access
 
 #### Site Info
 - pos 1-4: The number of characters in the variable data section.
@@ -21,15 +22,16 @@
 - pos 99-99: Dew point temperature quality
 
 #### Additional Data Section 
-- AA1: precipitation (liquid precipitation occurrence identifier) <br>
-first search for AA1 within data, the values following it indicate data as following:
+- AA1: precipitation (liquid precipitation occurrence identifier)
+- first search for AA1 within data, the values following it indicate data as following:
 - FLD LEN 2: liquid preciptiation period quantity in hours (hours)
 - FLD LEN 4: liquid precipitation depth dimension (mm)
 - FLD LEN 1: liquid precipitation condition code
 - FLD LEN 1: liquid precipitation quality code
 
 
-### The NSRD Hourly Solar Radiation Dataset
+### 2. The NSRD Hourly Solar Radiation Dataset
+[NSRD dataset](https://rredc.nrel.gov/solar/old_data/nsrdb/)
 
 #### Year 1961-1990 Dataset (WBAN ID#): 
 
@@ -59,23 +61,19 @@ first search for AA1 within data, the values following it indicate data as follo
 - col02: HH:MM
 - col16: METSTAT Glo (Wh/m2)
 
-
-
-### Workflow to Create Weather File
+### 3. Workflow to Create Weather File
 1. Download ISH_NSRD dataset
-    - wget
-    - figure out site/years that have solar 
-    radiation data
+    - wget (script: /home/disk/eos8/ach315/upscale/raw_data_process)
+    - figure out site/years that have solar radiation data
+    - store raw data in /home/disk/eos8/ach315/data/ISH_NSRD
+    - data stored in individual folders for each year
 2. Download ISH dataset
     - wget
-    - only download site/years in which we 
-    know solar radiation data exits
-3. 
-4. 
-5. 
+    - only download site/years in which we know solar radiation data exits
+    - store raw data in /home/disk/eos8/ach315/data/ISH/
+    - data stored in individual folders for each year
 6. Create solar radiation file list based on the weather files left after cleaning up
-    - solfile_list_1961to1990 is created 
-    based on weafile_list_1961to1990
-    - 
-7. Create a correct dataframe setup for ISH 
-and append the actual ISH data to it.
+    - solfile_list_1961to1990 is created based on weafile_list_1961to1990
+8. run script 'weafile_read.ipynb' to read in raw weather data
+9. run script 'weafile_process.ipynb' to 
+
