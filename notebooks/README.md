@@ -1,5 +1,5 @@
 ## Creating MAIZSIM Weather File Input
-### 1. The NASA Integrated Surfact Hourly Dataset (ISD)
+### 1. The NASA Integrated Surfact Hourly Dataset (ISH)
 [ISD dataset](https://www.ncdc.noaa.gov/isd/data-access) - choose FTP access
 
 #### Site Info
