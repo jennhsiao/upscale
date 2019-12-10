@@ -3,11 +3,6 @@ site: 03103, year: 1988, gap-filled: 1
 site: 03812, year: 1973, gap-filled: 1
 site: 03812, year: 1975, gap-filled: 2
 site: 03812, year: 1979, gap-filled: 6
-site: 03103, year: 1964, gap-filled: 1
-site: 03103, year: 1988, gap-filled: 1
-site: 03812, year: 1973, gap-filled: 1
-site: 03812, year: 1975, gap-filled: 2
-site: 03812, year: 1979, gap-filled: 6
 site: 03812, year: 1980, gap-filled: 1
 site: 03812, year: 1981, gap-filled: 8
 site: 03812, year: 1983, gap-filled: 3
