@@ -2,5 +2,6 @@
 *.eps
 raw_data_process/*
 weadata/data/control/*.txt
-init_files/site_years/*
-
+inits/con/*
+runs/*
+sims/*

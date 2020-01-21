@@ -1,0 +1,18 @@
+#! /bin/bash
+#PBS -l nodes=4:ppn=1
+#PBS -l walltime=08:00:00
+#PBS -m ae
+#PBS -M ach315@uw.ed
+#PBS -N maizsim_control
+
+FILES=/home/disk/eos8/ach315/upscale/runs/con/*
+
+for file in $FILES
+do 
+    cd /home/disk/eos8/ach315/maizsim
+    maizsim $file
+done
+
+
+    
+
