@@ -2,6 +2,10 @@
 *.eps
 raw_data_process/*
 weadata/data/control/*.txt
+weadata/*
 inits/*
 runs/*
 sims/*
+jobs/*
+init_files/*
+/init_files
