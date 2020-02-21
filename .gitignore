@@ -9,3 +9,4 @@ sims/*
 jobs/*
 init_files/*
 /init_files
+/notebooks/*.db
