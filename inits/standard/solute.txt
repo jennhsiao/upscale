@@ -1,4 +1,4 @@
- *** SOLUTE MOVER PARAMETER INFORMATION ***
+*** SOLUTE MOVER PARAMETER INFORMATION ***
  Number of solutes
  1
  Computational parameters 
