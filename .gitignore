@@ -1,3 +1,4 @@
+*.png
 *.csv
 *.eps
 raw_data_process/*
