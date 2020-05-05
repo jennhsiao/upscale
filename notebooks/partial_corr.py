@@ -3,7 +3,22 @@ from scipy import stats, linalg
 
 def partial_corr(C):
     """
-    code source: https://gist.github.com/fabianp/9396204419c7b638d38f
+    Code source: https://gist.github.com/fabianp/9396204419c7b638d38f
+    
+    Adpoted from Matlab's partialcorr
+    Uses the linear regression approach to compute the partial correlation,
+    algorithms detailed here: http://en.wikipedia.org/wiki/Partial_correlation#Using_linear_regression
+    
+    --- Summary:
+    Taking two variables of interest: X & Y, and the Z matrix with all the variables minus {X, Y}, 
+    the algorithm:
+    
+    1) performs a normal linear least-squares regression with X as the target and Z as the predictor
+    2) calculates the residuals in step #1
+    3) performs a normal linear least-squars regression with Y as the target and Z as the predictor
+    4) calcualtes the residuals in step #3
+    5) calculates the correlation coefficient between the residuals from step #2 & step #4
+    6) results give you the partial correlation between X & Y while controlling for the effect of Z
     
     --- Parameters:
     C: array-like, shape (n, p)
@@ -20,7 +35,7 @@ def partial_corr(C):
     p = C.shape[1]
     p_corr = np.zeros((p, p), dtype=np.float)
     for i in range(p):
-        P_corr[i, i] = 1
+        p_corr[i, i] = 1
         for j in range(i+1, p):
             idx = np.ones(p, dtype=np.bool)
             idx[i] = False
