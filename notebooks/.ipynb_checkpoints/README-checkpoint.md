@@ -61,19 +61,3 @@
 - col02: HH:MM
 - col16: METSTAT Glo (Wh/m2)
 
-### 3. Workflow to Create Weather File
-1. Download ISH_NSRD dataset
-    - wget (script: /home/disk/eos8/ach315/upscale/raw_data_process)
-    - figure out site/years that have solar radiation data
-    - store raw data in /home/disk/eos8/ach315/data/ISH_NSRD
-    - data stored in individual folders for each year
-2. Download ISH dataset
-    - wget
-    - only download site/years in which we know solar radiation data exits
-    - store raw data in /home/disk/eos8/ach315/data/ISH/
-    - data stored in individual folders for each year
-6. Create solar radiation file list based on the weather files left after cleaning up
-    - solfile_list_1961to1990 is created based on weafile_list_1961to1990
-8. run script 'weafile_read.ipynb' to read in raw weather data
-9. run script 'weafile_process.ipynb' to 
-

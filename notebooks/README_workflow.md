@@ -1,14 +1,34 @@
-## Data Process & Analysis Workflow
+### Data Process & Analysis Workflow
 
-### 1. prep: meteorology data
-1. weafile_read
-2. weafile_process
-3. weafile_visualization
+#### 0. raw data download
+1. Download ISH_NSRD dataset
+    - wget (script: /home/disk/eos8/ach315/upscale/raw_data_process)
+    - figure out site/years that have solar radiation data
+    - store raw data in /home/disk/eos8/ach315/data/ISH_NSRD
+    - data stored in individual folders for each year
+2. Download ISH dataset
+    - wget
+    - only download site/years in which we know solar radiation data exits
+    - Use WBAN weather station ID to reference stations in ISH_NSRD vs. ISH dataset
+    - store raw data in /home/disk/eos8/ach315/data/ISH/
+    - data stored in individual folders for each year
+3. Create solar radiation file list based on the weather files left after cleaning up
+    - solfile_list_1961to1990 is created based on weafile_list_1961to1990
 
-### 2. prep: model inputs
-1. init_files
-2. opt_param
-3. 
+
+#### 1. prep: meteorology data
+- weafile_read
+- weafile_process
+- weafile_visualization
 
 
-### 3. prep: simulation setup
+#### 2. prep: model inputs
+- init_files
+- opt_param
+-  
+
+
+#### 3. prep: simulation setup
+
+### 3. Workflow to Create Weather File
+
