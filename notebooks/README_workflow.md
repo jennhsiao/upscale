@@ -21,10 +21,9 @@
 - weafile_process
 - weafile_visualization
 
-
 #### 2. prep: model inputs
-- init_files
-- opt_param
+- init_siteyear
+- init_param
 
 #### 3. prep: simulation setup
 - wflow_con
@@ -32,5 +31,6 @@
 
 #### 4. analysis: model output
 - sim_con
+- sim_opt5
 - sim_opt100
 
