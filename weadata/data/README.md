@@ -11,7 +11,7 @@
 8. all
 
 #### Gap-filling Method
-Only used site-years with data gap sizes of 1-hr. 
+Only used site-years with data gap sizes of 2-hr. 
 Gap-filled those missing data points by linearly interpolating the value based on data from previous and post timepoints. 
 
 
