@@ -42,3 +42,25 @@ def get_filelist(path):
         else:
             allfiles.append(fullpath)
     return allfiles
+
+def CC_VPD(temp, rh):
+    """
+    function that calculates VPD with temperature and RH
+    RH values range between 0 & 1 (fraction, not %)
+    """
+    # constant parameters
+    Tref = 273.15  # reference temperature
+#    Es_Tref = 6.11 # saturation vapor pressure at reference temperature (mb)
+    Es_Tref = 0.611 # saturation vapor pressure at reference temperature (kPa)
+    Lv = 2.5e+06   # latent heat of vaporation (J/kg)
+    Rv = 461       # gas constant for moist air (J/kg)
+    
+    # transformed temperature inputs
+    Tair = temp + Tref
+    
+    # Clausius-Clapeyron relation
+    es = Es_Tref*np.exp((Lv/Rv)*(1/Tref - 1/Tair))
+    e = es*rh
+    vpd = es-e
+    
+    return(vpd)
