@@ -1,5 +1,6 @@
 import os
 import pandas as pd 
+import numpy as np
 
 
 def tup_convert(tup):
@@ -66,7 +67,7 @@ def read_sims(files):
     
     cols = ['year', 'cvar', 'site', 'date', 'jday', 'time', 
             'leaves', 'mature_lvs', 'drop_lvs', 'LA', 'LA_dead', 'LAI', 
-            'RH', 'leaf_WP', 'PFD', 'solrad', 'temp_soil', 'temp_air', 'temp_can', 'ET_dmd', 'ET_suply',
+            'RH', 'leaf_WP', 'PFD', 'Solrad', 'temp_soil', 'temp_air', 'temp_can', 'ET_dmd', 'ET_suply',
             'Pn', 'Pg', 'resp', 'av_gs', 'LAI_sunlit', 'LAI_shaded', 'PFD_sunlit', 'PFD_shaded',
             'An_sunlit', 'An_shaded', 'Ag_sunlit', 'Ag_shaded', 'gs_sunlit', 'gs_shaded', 'VPD',
             'N', 'N_dmd', 'N_upt', 'N_leaf', 'PCRL', 'dm_total', 'dm_shoot', 'dm_ear', 'dm_totleaf',
