@@ -18,7 +18,8 @@ def maps(sites, data, title='title', cbar_lab='cbar_lab'):
                               central_latitude=39.5, central_longitude=-98.35))
     ax.set_extent([-123, -72, 19, 53])
     mp = ax.scatter(sites.lon, sites.lat, transform=ccrs.PlateCarree(), 
-                    s=60, c=data.dm_ear, cmap=YlGn_9.mpl_colormap, alpha=0.8)
+                    s=60, c=data.dm_ear, cmap=YlGn_9.mpl_colormap, 
+                    vmin=20, vmax=70, alpha=0.8)
     ax.add_feature(cfeature.BORDERS, edgecolor='grey')
     ax.add_feature(cfeature.COASTLINE, edgecolor='grey')
     ax.add_feature(cfeature.STATES, edgecolor='grey', linewidth=0.5)
