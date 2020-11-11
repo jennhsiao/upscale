@@ -1,7 +1,9 @@
 import os
 import pandas as pd 
 import numpy as np
+import pytz
 from scipy import stats, linalg
+from timezonefinder import TimezoneFinder
 
 
 def tup_convert(tup):
@@ -204,3 +206,31 @@ def partial_corr(C):
     
     
     return p_corr
+
+
+def find_zone(site, siteinfo):
+    """
+    find time zone for specific sites
+    """
+    lat = float(siteinfo[siteinfo.site == site].lat)
+    lon = float(siteinfo[siteinfo.site == site].lon)
+    tf = TimezoneFinder()    
+    zone = tf.timezone_at(lng=lon, lat=lat)
+    return zone
+
+
+def utc_to_local(times, zone):
+    """
+    convert list of utc timestamps into local time
+    """
+    times = times.to_pydatetime() # convert from pd.DatetimeIndex into python datetime format
+    utc = pytz.timezone('UTC') # setting up the UTC timezone, requires package 'pytz'
+    local_datetime = list()
+    
+    for time in times:
+        utctime = utc.localize(time) # adding UTC timezone to datetime
+        localtime = utctime.astimezone(pytz.timezone(zone)) 
+        datetime = pd.to_datetime(localtime)
+        local_datetime.append(datetime)
+        
+    return local_datetime
