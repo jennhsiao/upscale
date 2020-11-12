@@ -234,3 +234,22 @@ def utc_to_local(times, zone):
         local_datetime.append(datetime)
         
     return local_datetime
+
+
+def calc_gdd(temps): 
+    """
+    - calculates GDH with base temperature = 8˚C
+    - calculated values divided by 24 to correspond to daily values
+    - function returns count of point in which gdd exceeds 100
+      which can then be used to identify date in which GDD=100 is reached
+    """
+    gdd = 0
+    for count, temp in enumerate(temps): 
+        if gdd > 100: 
+            break
+        else:
+            if temp-8 < 0:
+                gdd += 0
+            else:
+                gdd += (temp-8)/24
+    return(count)
