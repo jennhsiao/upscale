@@ -253,3 +253,11 @@ def calc_gdd(temps):
             else:
                 gdd += (temp-8)/24
     return(count)
+
+
+def tup_convert(tup):
+    """
+    simple function that converts tuple into string
+    """
+    str = ''.join(tup)
+    return str
