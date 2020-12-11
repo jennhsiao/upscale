@@ -7,7 +7,7 @@ import pandas as pd
 def soilquery(latitude, longitude):
     """
     Query for NRCS SSURGO soil database    
-    --- Code modified from Maura, USDA ARS --- 
+    ** Code modified from Maura, USDA ARS **
     """
     lat = str(latitude)
     lon = str(longitude)
@@ -22,7 +22,8 @@ def soilquery(latitude, longitude):
           <sdm:RunQuery>
              <sdm:Query>SELECT co.cokey as cokey, ch.chkey as chkey, comppct_r as prcent, slope_r, slope_h as slope, hzname, hzdept_r as depth, awc_r as awc, 
                         claytotal_r as clay, silttotal_r as silt, sandtotal_r as sand, om_r as OM, dbthirdbar_r as dbthirdbar, wthirdbar_r as th33, 
-                        (dbthirdbar_r-wthirdbar_r)/100 as bd FROM sacatalog sc
+                        (dbthirdbar_r-wthirdbar_r)/100 as bd 
+                        FROM sacatalog sc
                         FULL OUTER JOIN legend lg  ON sc.areasymbol=lg.areasymbol
                         FULL OUTER JOIN mapunit mu ON lg.lkey=mu.lkey
                         FULL OUTER JOIN component co ON mu.mukey=co.mukey
@@ -38,7 +39,6 @@ def soilquery(latitude, longitude):
     </soap:Envelope>"""
 
     response = requests.post(url,data=body,headers=headers)
-#    print("###############################################\n")
     # Put query results in dictionary format
     my_dict = xmltodict.parse(response.content)
 
