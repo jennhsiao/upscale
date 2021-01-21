@@ -12,3 +12,6 @@ init_files/*
 /init_files
 /notebooks/*.db
 /test/*
+/db/*
+/python_test/*
+/envs/*
