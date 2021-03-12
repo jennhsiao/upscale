@@ -7,7 +7,7 @@ from funcs import fold
 from palettable.colorbrewer.sequential import YlGnBu_8
 
 # setting parameter range
-df_params = pd.read_csv('/home/disk/eos8/ach315/upscale/inits/param_100.csv')
+df_params = pd.read_csv('/home/disk/eos8/ach315/upscale/params/params_opt.csv')
 df_params = df_params.drop(['rmax_ltar'], axis=1)
 
 param_range = {'juv_leaves': [15, 25],
