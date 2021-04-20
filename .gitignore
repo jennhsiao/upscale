@@ -1,6 +1,7 @@
 *.png
 *.csv
 *.eps
+.ipynb_checkpoints
 raw_data_process/*
 weadata/data/control/*.txt
 weadata/*
@@ -15,3 +16,4 @@ init_files/*
 /db/*
 /python_test/*
 /envs/*
+/stats/*
