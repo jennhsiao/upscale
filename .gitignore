@@ -17,3 +17,4 @@ init_files/*
 /python_test/*
 /envs/*
 /stats/*
+.vscode/
