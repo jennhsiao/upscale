@@ -2,6 +2,21 @@
 ### 1. The NASA Integrated Surfact Hourly Dataset (ISH)
 [ISD dataset](https://www.ncdc.noaa.gov/isd/data-access) - choose FTP access
 
+#### Raw data download
+1. Download ISH_NSRD dataset
+    - wget script: /home/disk/eos8/ach315/upscale/raw_data_process
+    - figure out site/years that have solar radiation data
+    - store raw data: /home/disk/eos8/ach315/data/ISH_NSRD
+    - data stored in individual folders for each year
+2. Download ISH dataset
+    - wget
+    - only download site/years in which we know solar radiation data exits
+    - Use WBAN weather station ID to reference stations in ISH_NSRD vs. ISH dataset
+    - store raw data: /home/disk/eos8/ach315/data/ISH/
+    - data stored in individual folders for each year
+3. Create solar radiation file list based on the weather files left after cleaning up
+    - solfile_list_1961to1990 is created based on weafile_list_1961to1990
+
 #### Site Info
 - pos 1-4: The number of characters in the variable data section.
 - pos 5-10: USAF identifier (1991-2010)
